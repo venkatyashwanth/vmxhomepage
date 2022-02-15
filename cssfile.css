@@ -13,6 +13,16 @@
     src: url('./font/Montserrat/static/Montserrat-Medium.ttf');
 }
 
+@font-face{
+    font-family: popinsSemi;
+    src: url('./font/Poppins/Poppins-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: popinsLight;
+    src: url('./font/Poppins/Poppins-Light.ttf');
+}
+
 header{
     width: 100%;
     min-height: 100vh;
@@ -150,6 +160,8 @@ header{
 /* active link */
 .linksContainer .nav-item a.active{
     color: #F58025;
+    font-family: MontMed;
+    font-size: 14px;
 }
 
   
@@ -157,14 +169,360 @@ header{
 /* Inactive link */
 .linksContainer .nav-item a{
     color: #494949;
+    font-family: MontMed;
+    font-size: 14px;
+}
+
+@media (max-width: 420px) {
+    .linksContainer .nav-item a.active{
+        color: #F58025;
+        font-family: MontMed;
+        font-size: 12px;
+    }
+    /* Inactive link */
+    .linksContainer .nav-item a{
+        color: #494949;
+        font-family: MontMed;
+        font-size: 12px;
+    }
 }
 
 
 .linksContainer .nav-link{
-    border: none;
+    /* border: none; */
+    border: 1px solid green;
 }
 
 
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
     border: none;
+}
+
+.linkBox{
+    width: 240px;
+}
+
+.linkSecHeading{
+    font-family: MontMed;
+    font-size: 32px;
+}
+
+.linkSecParagraph{
+    font-family: MontReg;
+    font-size: 20px;
+}
+.navborder{
+    padding-bottom: 5px;
+    border-bottom: 1px solid #BDBFC9;
+}
+.featureSection{
+    margin-top: 60px;
+}
+.featureSection .container{
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.fsBorder{
+    position: relative;
+}
+.fsBorder:before{
+    content: "";
+    background: #F58025;
+    height: 3px;
+    width: 80px;
+    position: absolute;
+    bottom: 0px;
+    left: 46%;
+    
+}
+
+.fsHeadsec{
+    font-family: MontBold;
+    font-size: 22px;
+}
+.fsParasec{
+    font-family: MontReg;
+    font-size: 16px;
+}
+.propertyCard{
+    height: 240px;
+    border-radius: 10px;
+}
+
+@media (max-width: 450px){
+    .fsBorder h2{
+        font-size: 24px;
+    }
+    .propertyCard{
+        height: 340px;
+    }
+
+    .fsHeadsec{
+        font-family: MontBold;
+        font-size: 16px;
+    }
+    .fsParasec{
+        font-family: MontReg;
+        font-size: 12px;
+    }
+}
+
+.bigPicture{
+    background: url(./media/bigPicBg.png);
+    background-size: cover;
+    min-height: 100vh;
+}
+.bgHeading{
+    font-family: MontBold;
+    font-size: 42px;
+    position: relative;
+}
+
+@media (max-width:470px) {
+    .bgHeading{
+        font-size: 24px;
+    }
+}
+
+.bgHeading:after{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    background: #F58025;
+    height: 3px;
+    width: 80px;
+    left: 40%;
+}
+
+.bigCard{
+    width: 260px;
+    /* height: 200px; */
+    background: white;
+    box-shadow: 0px 7px 25px #bec7f670;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.bigCard h4{
+    font-family: popinsSemi;
+    font-size: 64px;
+    color: #F58025;
+}
+
+.bigCard p{
+    font-family: popinsSemi;
+    font-size: 28px;
+    color: #001245;
+}
+
+@media (max-width: 470px) {
+    .bigCard h4{
+        font-family: popinsSemi;
+        font-size: 32px;
+        color: #F58025;
+    }
+    
+    .bigCard p{
+        font-family: popinsSemi;
+        font-size: 14px;
+        color: #001245;
+    }
+}
+
+.bgTextContainer{
+    border-left: 2px solid #0012451a;
+    height: 280px;
+}
+
+.bgTextContainer h3{
+    font-family: MontBold;
+    font-size: 36px;
+}
+
+.bgTextContainer p{
+    font-family:  MontReg;
+    font-size: 18px;
+    width: 90%;
+}
+
+@media (max-width: 470px) {
+    .bgTextContainer{
+        /* border-left: 2px solid #0012451a; */
+        border-left: none;
+        height: 280px;
+    }
+    
+    .bgTextContainer h3{
+        font-family: MontBold;
+        font-size: 18px;
+    }
+    
+    .bgTextContainer p{
+        font-family:  MontReg;
+        font-size: 12px;
+        width: 90%;
+    }
+    
+}
+
+.consultSection{
+    background: url("./media/consutlBg.png");
+    background-size: cover;
+}
+
+.consultSection .container{
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.consultHeading{
+    font-family:  MontBold;
+    font-size: 32px;
+    color: #ffffff;
+}
+
+.consultBtn{
+    background-color: #F58025;
+    border: none;
+    border-radius: 48px;
+    color: #ffffff;
+    font-family:  MontMed;
+    font-size: 16px;
+}
+
+@media (max-width: 430px) {
+    .consultHeading{
+        font-size: 16px;
+    }
+    
+    .consultBtn{
+        border-radius: 48px;
+        font-size: 12px;
+    }
+}
+
+footer .container{
+    padding-left: 6%;
+    padding-right: 6%;
+    
+}
+
+.upperFooter{
+    background-color: #000A2D;
+}
+
+.lowerFooter{
+    background-color: #707070;
+}
+
+.footerBrand{
+    font-family: MontBold;
+    color: #F58025;
+    font-size: 24px;
+}
+
+.footerBrandLink:hover{
+    text-decoration: none;
+}
+/* 
+.footerBrand:hover{
+    text-decoration: none;
+} */
+
+.footerProducts h4{
+    color: #BDBFC9;
+    font-family: MontMed;
+    font-size: 20px;
+}
+
+.footerProducts + div span{
+    font-family: MontReg;
+    font-size: 16px;
+    color: #BDBFC9;
+}
+
+.footerProducts{
+    position: relative;
+}
+
+.footerProducts::before{
+    content: "";
+    position: absolute;
+    background-color: #F58025;
+    height: 2px;
+    width: 30px;
+    left: 0px;
+    bottom: -5px;
+}
+
+.footerLinks h4{
+    font-family: MontMed;
+    color: #BDBFC9;
+    font-size: 20px;
+}
+
+.footerLinks + div ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    color: #BDBFC9;
+    font-family: MontReg;
+    font-size: 16px;
+}
+
+.footerLinks{
+    position: relative;
+}
+
+.footerLinks::before{
+    content: "";
+    position: absolute;
+    background-color: #F58025;
+    height: 2px;
+    width: 30px;
+    left: 0px;
+    bottom: -5px;
+}
+
+.footerContact h4{
+    font-family: MontMed;
+    color: #BDBFC9;
+    font-size: 20px;
+}
+
+.footerContact{
+    position: relative;
+}
+
+.footerContact::before{
+    content: "";
+    position: absolute;
+    background-color: #F58025;
+    height: 2px;
+    width: 30px;
+    left: 0px;
+    bottom: -5px;
+}
+
+.footerContact + div span{
+    font-family: MontReg;
+    font-size: 16px;
+    color: #BDBFC9;
+}
+
+.lowerFooter .container{
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.socialIcons{
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.socialIcons + div{
+    font-family: popinsLight;
+    font-size: 14px;
+    color: #ffffff;
 }
